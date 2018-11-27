@@ -1,0 +1,13 @@
+persistance\dao\IDAO.class
+persistance\dao\SpeciesDAO.class
+persistance\manager\JDBCManager.class
+business\entities\Species.class
+persistance\dao\Test.class
+persistance\dao\AnimalDAO.class
+persistance\dao\PersonDAO.class
+persistance\dao\ProcedureDAO.class
+persistance\manager\CfgManager.class
+persistance\exceptions\DAOException.class
+business\entities\Person.class
+persistance\manager\ICfgManager.class
+business\entities\Animal.class

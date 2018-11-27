@@ -1,0 +1,4 @@
+persistance\dao\TestSpeciesDAO.class
+persistance\dao\TestPersonDAO.class
+persistance\dao\TestProcedureDAO.class
+persistance\dao\TestAnimalDAO.class
