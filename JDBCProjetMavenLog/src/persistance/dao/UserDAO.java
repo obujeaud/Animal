@@ -27,7 +27,6 @@ public class UserDAO {
 			}
 			return userCo;
 		} catch (ClassNotFoundException | SQLException | IOException e) {
-			// TODO Auto-generated catch block
 			throw new DAOException(e);
 		} finally {
 			try {

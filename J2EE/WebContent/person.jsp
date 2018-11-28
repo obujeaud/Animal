@@ -15,10 +15,8 @@
 <%String se = (String) session.getAttribute("login");%>
 			
 	function mySubmit(id) {
-		var sub = document.getElementById("myid");
-		var form = document.getElementById("formu");
-		sub.value = id;
-		form.submit();
+		document.getElementById("myid").value = id;
+		document.getElementById("formu").submit();
 	}
 	
 	function myCreate() {
@@ -31,8 +29,7 @@
 	
 	function myDelete(id, name) {
 		if(confirm("Souhaitez vous vraiment supprimer "+name+" ?")){
-			var sub = document.getElementById("del");
-			sub.value = id;
+			document.getElementById("del").value = id;
 			window.location.assign("redirectModif.jsp?id="+sub.value);
 		}
 	}
@@ -52,7 +49,7 @@
 		<input type="submit" value="Deconnexion" name="dec" />
 	</form>
 	<form method="post" action="listA.jsp" id="formu">
-		<table border="1px solid">
+		<table border="2px solid">
 			<tr>
 				<th>ID</th>
 				<th>Name</th>
@@ -63,15 +60,7 @@
 				<th>Update</th>
 			</tr>
 			<%
-				List<Person> listp = new ArrayList<>();
-					try {
-						listp = s.personList();
-					} catch (Exception e) {
-						e.printStackTrace();
-						response.sendRedirect("error.jsp");
-						return;
-					}
-					for (Person p : listp) {
+					for (Person p : s.personList()) {
 			%>
 			<tr>
 				<td id="id"><%=p.getId()%></td>
@@ -119,7 +108,7 @@
 	<form method="post" action="deco.jsp">
 		<input type="submit" value="Deconnexion" name="dec" />
 	</form>
-	<table border="1px solid">
+	<table border="2px solid">
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
@@ -128,15 +117,7 @@
 			<th>Nb Animaux</th>
 		</tr>
 		<%
-			List<Person> listp = new ArrayList<>();
-				try {
-					listp = s.personList();
-				} catch (Exception e) {
-					e.printStackTrace();
-					response.sendRedirect("error.jsp");
-					return;
-				}
-				for (Person p : listp) {
+				for (Person p : s.personList()) {
 		%>
 		<tr>
 			<td id="id"><%=p.getId()%></td>

@@ -24,10 +24,19 @@
 			window.location.assign("redirectAnimal.jsp?idDelete="+sub.value);
 		}
 	}
+	
+	function detruire(id){
+		document.location = "redirectAnimal.jsp?deleteAniList="+id;
+	}
+	
+	function retour(){
+		document.location = "person.jsp";
+	}
 </script>
 <%
 	PersonDAO pdao = new PersonDAO();
 	Person p = pdao.findById(Long.parseLong(request.getParameter("leHidAni")));
+	session.setAttribute("idPers", p);
 	AnimalDAO adao = new AnimalDAO();
 	ServiceAnimal sa = new ServiceAnimal();
 %>
@@ -39,13 +48,14 @@
 		<input type="submit" value="Deconnexion" name="dec" />
 	</form>
 	<h2>Liste des animaux déjà en possession</h2>
-	<table border="1px solid black">
+	<table border="2px solid black">
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
 			<th>Sex</th>
 			<th>Coat</th>
 			<th>Specie</th>
+			<th>Enlever</th>
 		</tr>
 		<%
 			for (Animal a : p.getA()) {
@@ -55,6 +65,7 @@
 			<td><%=a.getSex()%></td>
 			<td><%=a.getCoat_color()%></td>
 			<td><%=a.getS().getCommon_name()%></td>
+			<td><input type="button" value="Enlever" id="enleve" name="lEnleve" onclick="detruire(<%=a.getId()%>)"/></td>
 		</tr>
 		<%
 			}
@@ -63,7 +74,7 @@
 	<form method="get" action="redirectAnimal.jsp" id="formuAni"
 		name="laformu">
 		<h2>Animaux à ajouter</h2>
-		<table border="1px solid black">
+		<table border="2px solid black">
 			<tr>
 				<th></th>
 				<th>ID</th>
@@ -99,8 +110,10 @@
 			value="<%=p.getId()%>" /> <input type="submit" value="Ajouter" /> <input
 			type="hidden" id="upAni" name="leUpAni" value="" />
 	</form>
+	<input type="button" value="Retour" onclick="retour()" />
 	<input type="button" id="createAni" name="leCreateAni"
 		value="Créer un animal" onclick="createAni()" />
 	<input type="hidden" value="" id="delAni" name="leDelAni" />
+	<input type="hidden" value="" id="idPers" name="leIdPers" />
 </body>
 </html>

@@ -26,6 +26,7 @@ public class PersonDAO implements IDAO<Person> {
 	private String update = "UPDATE person SET nom = ?, prenom = ?, age = ? WHERE id_person = ?";
 	private String delete = "DELETE FROM person WHERE id_person = ?";
 	private String deleteAnimalPerson = "DELETE FROM animal__person WHERE id_person = ?";
+	private String deleteAniPers = "DELETE FROM animal__person WHERE id_person=? AND id_animal=?";
 	private Person per;
 	AnimalDAO a = new AnimalDAO();
 	private static Log log = LogFactory.getLog(PersonDAO.class);
@@ -134,6 +135,26 @@ public class PersonDAO implements IDAO<Person> {
 		}
 		log.info("Person found");
 		return per;
+	}
+	
+	public void removeAnimal(long idPers, long idAni)throws Exception {
+		Connection con;
+		try {
+			con = JDBCManager.getInstance().openConection();
+			PreparedStatement prep = con.prepareStatement(deleteAniPers);
+			prep.setLong(1, idPers);
+			prep.setLong(2, idAni);
+			prep.execute();
+		}catch (ClassNotFoundException | SQLException | IOException e) {
+			// TODO Auto-generated catch block
+			throw new DAOException(e);
+		} finally {
+			try {
+				JDBCManager.getInstance().closeConnection();
+			} catch (Exception e) {
+				throw new DAOException(e);
+			}
+		}
 	}
 	
 	//Show all person's animals

@@ -19,7 +19,7 @@
 <body>
 	<h1>Bienvenue <%=se %></h1>
 	<form method="post" action="person.jsp">
-		<table border="1px solid">
+		<table border="2px solid">
 			<%
 				PersonDAO s = new PersonDAO();
 			%>

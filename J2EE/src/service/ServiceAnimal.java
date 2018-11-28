@@ -3,6 +3,8 @@ package service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import business.entities.Animal;
 import business.entities.Person;
 import persistance.dao.PersonDAO;
@@ -20,5 +22,11 @@ public class ServiceAnimal {
 			p.setA(a);
 		}
 		pdao.updateById(p);
+	}
+
+	public void removeAnimal(HttpSession session, Animal a) throws Exception {
+		Person p = (Person)session.getAttribute("idPers");
+		pdao.removeAnimal(p.getId(), a.getId());
+		session.removeAttribute("idPers");
 	}
 }

@@ -28,7 +28,11 @@
 			}
 			sa.maj(p);
 			response.sendRedirect("person.jsp");
-		} else {
+		} else if(request.getParameter("deleteAniList") != null && session.getAttribute("idPers") != null){
+			Animal a = adao.findById(Integer.parseInt(request.getParameter("deleteAniList")));
+			sa.removeAnimal(session, a);
+			response.sendRedirect("person.jsp");
+		}else {
 			if (request.getParameter("idDelete") != null) {
 				adao.deleteById(Long.parseLong(request.getParameter("idDelete")));
 				response.sendRedirect("person.jsp");
