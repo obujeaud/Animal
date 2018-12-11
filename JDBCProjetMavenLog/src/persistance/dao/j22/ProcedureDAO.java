@@ -1,4 +1,4 @@
-package persistance.dao;
+package persistance.dao.j22;
 
 import java.io.IOException;
 import java.sql.CallableStatement;
@@ -13,6 +13,7 @@ import org.apache.commons.logging.LogFactory;
 
 import business.entities.Animal;
 import business.entities.Species;
+import persistance.dao.j22.PersonDAO;
 import persistance.exceptions.DAOException;
 import persistance.manager.JDBCManager;
 

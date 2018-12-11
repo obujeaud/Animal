@@ -1,4 +1,4 @@
-package persistance.dao;
+package persistance.dao.j22;
 
 import java.util.List;
 

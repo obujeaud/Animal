@@ -1,6 +1,7 @@
 package persistance.dao;
 
 import business.entities.Species;
+import persistance.dao.j22.SpeciesDAO;
 
 public class TestSpeciesDAO extends TU_Pere {
 	SpeciesDAO sdao = new SpeciesDAO();

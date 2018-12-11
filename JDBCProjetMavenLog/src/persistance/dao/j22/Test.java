@@ -1,4 +1,6 @@
-package persistance.dao;
+package persistance.dao.j22;
+
+import persistance.dao.j22.PersonDAO;
 
 public class Test {
 

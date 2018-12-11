@@ -4,8 +4,8 @@ import java.util.List;
 
 import business.entities.Person;
 import business.entities.User;
-import persistance.dao.PersonDAO;
-import persistance.dao.UserDAO;
+import persistance.dao.j22.PersonDAO;
+import persistance.dao.j22.UserDAO;
 
 public class MyService {
 	private PersonDAO pdao = new PersonDAO();

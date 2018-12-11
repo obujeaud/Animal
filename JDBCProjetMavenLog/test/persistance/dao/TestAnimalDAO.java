@@ -2,6 +2,8 @@ package persistance.dao;
 
 import business.entities.Animal;
 import business.entities.Species;
+import persistance.dao.j22.AnimalDAO;
+import persistance.dao.j22.SpeciesDAO;
 
 public class TestAnimalDAO extends TU_Pere {
 	AnimalDAO anidao = new AnimalDAO();

@@ -1,4 +1,4 @@
-package persistance.dao;
+package persistance.dao.j22;
 
 import java.io.IOException;
 import java.sql.Connection;

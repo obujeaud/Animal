@@ -1,7 +1,7 @@
 <%@page import="business.entities.Animal"%>
-<%@page import="persistance.dao.AnimalDAO"%>
+<%@page import="persistance.dao.j22.AnimalDAO"%>
 <%@page import="business.entities.Person"%>
-<%@page import="persistance.dao.PersonDAO"%>
+<%@page import="persistance.dao.j22.PersonDAO"%>
 <%@page import="service.ServiceAnimal"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>

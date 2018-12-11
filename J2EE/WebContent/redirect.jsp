@@ -1,5 +1,5 @@
 <%@page import="service.MyService"%>
-<%@page import="persistance.dao.UserDAO"%>
+<%@page import="persistance.dao.j22.UserDAO"%>
 <%@page import="business.entities.User"%>
 <%@page import="hash.Encoder"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"

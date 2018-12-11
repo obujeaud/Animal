@@ -2,6 +2,8 @@ package persistance.dao;
 
 import business.entities.Animal;
 import business.entities.Person;
+import persistance.dao.j22.AnimalDAO;
+import persistance.dao.j22.PersonDAO;
 
 public class TestPersonDAO extends TU_Pere {
 	String selectAniPer = "select count(*) from animal__person";

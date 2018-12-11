@@ -1,6 +1,6 @@
-<%@page import="persistance.dao.AnimalDAO"%>
+<%@page import="persistance.dao.j22.AnimalDAO"%>
 <%@page import="business.entities.Animal"%>
-<%@page import="persistance.dao.SpeciesDAO"%>
+<%@page import="persistance.dao.j22.SpeciesDAO"%>
 <%@page import="business.entities.Species"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"

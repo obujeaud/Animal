@@ -1,5 +1,7 @@
 package persistance.dao;
 
+import persistance.dao.j22.ProcedureDAO;
+
 public class TestProcedureDAO extends TU_Pere {
 	ProcedureDAO prdao = new ProcedureDAO();
 	String selectA = "select count(id_animal) from animal";

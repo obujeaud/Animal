@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import business.entities.Animal;
 import business.entities.Person;
-import persistance.dao.PersonDAO;
+import persistance.dao.j22.PersonDAO;
 
 public class ServiceAnimal {
 	List<Animal> listA = new ArrayList<>();

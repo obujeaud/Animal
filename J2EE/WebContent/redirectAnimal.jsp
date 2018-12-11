@@ -1,10 +1,10 @@
 <%@page import="business.entities.Species"%>
 <%@page import="business.entities.Animal"%>
 <%@page import="business.entities.Person"%>
-<%@page import="persistance.dao.PersonDAO"%>
-<%@page import="persistance.dao.SpeciesDAO"%>
+<%@page import="persistance.dao.j22.PersonDAO"%>
+<%@page import="persistance.dao.j22.SpeciesDAO"%>
 <%@page import="service.ServiceAnimal"%>
-<%@page import="persistance.dao.AnimalDAO"%>
+<%@page import="persistance.dao.j22.AnimalDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
